@@ -4,6 +4,7 @@ import { API_URL, API_KEY, IMAGE_BASE_URL } from '../../../Config';
 import MainImage from './Sections/MainImage';
 import GridCards from '../commons/GridCards';
 import { Row } from 'antd';
+import Auth from '../../../hoc/auth';
 
 function LandingPage() {
 
@@ -83,4 +84,4 @@ function LandingPage() {
   )
 }
 
-export default LandingPage
+export default Auth(LandingPage, null);
